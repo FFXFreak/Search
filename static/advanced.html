@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- https://getbootstrap.com/docs/5.1/getting-started/introduction/ -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link href="C:/Users/PearsonJ3/Repository/FFXFreak.github.io/search/static/Google__G__Logo.svg" rel="icon">
+        <link href="C:/Users/PearsonJ3/Repository/FFXFreak.github.io/search/static/styles.css" rel="stylesheet">
+        <title>Google Advanced Search</title>
+        <style>            
+            .search{
+                float: right;
+                font-size: 11px;
+                font-weight: bold;
+            }
+
+            input[type=submit] {
+            color: white;
+            background-color: #4d90fe;
+            background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);
+            border: 1px solid #3079ed;
+            height: 30px;
+            width: 120px;
+            }
+
+            input[type=submit]:hover {
+                box-shadow:inset 0 0 10px rgba(33,33,33,.2);
+            }
+
+            .advancedHeader{
+                margin-top: 45px;
+                color:#d93025;
+                font-size: 20px;
+            }  
+            .advancedPad{
+                padding-left: 45px;
+            } 
+            
+            input[type=text]:focus {
+                outline: none !important;
+                border: 1px solid blue;
+                box-shadow:inset 0 0 5px rgba(33,33,33,.2);
+            }
+
+            .tableFixed{
+                width: 167px;
+            }
+
+            @media screen and (min-width: 1057px){
+                input[type=text] {
+                width: 570px;
+                border: 1px solid lightgray;
+                height: 28px;
+                padding-left: 8px;
+                }
+
+                .hideColumn{
+                    padding: 10px;
+                    font-size: 11px;
+                    color: #555;
+                }
+
+                .hideHeader{
+                    color: #777;
+                    font-weight: bold;
+                }
+
+                .extraPadding{
+                padding-left: 16px;
+                }
+
+            }
+
+            @media screen and (max-width: 1056px){
+                input[type=text] {
+                width: 100%;
+                border: 1px solid lightgray;
+                height: 28px;
+                padding-left: 8px;
+                }
+                
+                .hideColumn, .hideHeader{
+                    display:none;
+                }
+
+                .extraPadding{
+                width: 78.42%;
+                padding-left: 16px;
+                }
+            }
+            
+            .extraPadding{
+                padding-left: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="linksContainer">
+            <span style="float: left;"><a href="index.html"><img src="C:/Users/PearsonJ3/Repository/FFXFreak.github.io/search/static/googleMain.png" alt="Google Logo" height="25" width="75"></a></span>
+            <a href="index.html">Search</a>
+            <a href="image.html">Images</a>
+        </div>
+        <div class="advancedHeader">
+            <span class="advancedPad">Advanced Search</span>
+            <hr>
+        </div>
+        <div class="advancedContainer">
+            <form action="https://google.com/search">
+                <table>
+                    <tr>
+                        <th>Find pages with...</th>
+                        <th></th>
+                        <th class="hideHeader">To do this in the search box.</th>
+                    </tr>
+                    <tr>
+                        <td class="tableFixed">all these words:</td>
+                        <td class="extraPadding"><input type="text" name="as_q" maxlength=2048 autofocus autocomplete="off" autocapitalize="off" autocorrect="off"></td>
+                        <td class="hideColumn">Type the important words: <span style="color:#777; font-family: monospace;">tri-colour rat terrier</span></td>
+                    </tr>
+                    <tr>
+                        <td class="tableFixed">this exact word or phrase: </td>
+                        <td class="extraPadding"><input type="text" name="as_epq" maxlength=2048 autocomplete="off" autocapitalize="off" autocorrect="off"></td>
+                        <td class="hideColumn">Put exact words in quotes: "<span style="color:#777; font-family: monospace;">rat terrier</span>"</td>
+                    </tr>
+                    <tr>
+                        <td class="tableFixed">any of these words: </td>
+                        <td class="extraPadding"><input type="text" name="as_oq" maxlength=2048 autocomplete="off" autocapitalize="off" autocorrect="off"></td>
+                        <td class="hideColumn">Type <span style="color:#777; font-family: monospace;">OR</span> between all the words you want: <span style="color:#777; font-family: monospace;">miniature OR standard</span></td>
+                    </tr>
+                    <tr>
+                        <td class="tableFixed">none of these words: </td>
+                        <td class="extraPadding"><input type="text" name="as_eq" maxlength=2048 autocomplete="off" autocapitalize="off" autocorrect="off"></td>
+                        <td class="hideColumn">Put a minus sign just before words that you don't want: <span style="color:#777; font-family: monospace;">-rodent, -"Jack Russell"</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input class="search" type="submit" name="btnK" value="Advanced Search"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><hr></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>
